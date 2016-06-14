@@ -1,0 +1,40 @@
+<?php
+
+namespace AdressBookBundle\Entity;
+
+/**
+ * Friends
+ */
+
+/**
+ * @ORM\Entity
+ */
+class Friends
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdressBookBundle\Entity\User")
+     */
+    private $user;
+
+    /**
+     * @ORM\OneToOne(targetEntity="AdressBookBundle\Entity\User")
+     */
+    private $follower;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+}

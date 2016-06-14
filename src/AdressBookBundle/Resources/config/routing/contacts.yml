@@ -1,0 +1,24 @@
+contacts_index:
+    path:     /
+    defaults: { _controller: "AdressBookBundle:Contacts:index" }
+    methods:  GET
+
+contacts_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdressBookBundle:Contacts:show" }
+    methods:  GET
+
+contacts_new:
+    path:     /new
+    defaults: { _controller: "AdressBookBundle:Contacts:new" }
+    methods:  [GET, POST]
+
+contacts_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdressBookBundle:Contacts:edit" }
+    methods:  [GET, POST]
+
+contacts_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdressBookBundle:Contacts:delete" }
+    methods:  DELETE

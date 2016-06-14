@@ -1,0 +1,12 @@
+adress_book_contacts:
+    resource: "@AdressBookBundle/Resources/config/routing/contacts.yml"
+    prefix:   /contacts
+
+
+
+adress_book_homepage:
+    path:     /
+    defaults: { _controller: AdressBookBundle:contacts:index }
+
+
+

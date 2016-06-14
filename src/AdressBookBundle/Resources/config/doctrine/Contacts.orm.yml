@@ -1,0 +1,20 @@
+AdressBookBundle\Entity\Contacts:
+    type: entity
+    table: null
+    repositoryClass: AdressBookBundle\Repository\ContactsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        contact:
+            targetEntity: User
+            inversedBy: contacts
+            joinColumn:
+                name: contact_id
+                referencedColumnName: id
+
+
+    lifecycleCallbacks: {  }

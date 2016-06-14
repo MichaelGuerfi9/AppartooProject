@@ -1,0 +1,17 @@
+AdressBookBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: AdressBookBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    oneToMany:
+        contacts:
+            targetEntity: Contacts
+            mappedBy: user
+
+    lifecycleCallbacks: {  }
